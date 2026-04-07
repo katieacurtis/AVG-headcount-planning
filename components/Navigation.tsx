@@ -10,8 +10,10 @@ import {
   PoundSterling,
   Stethoscope,
   HeartPulse,
+  RotateCcw,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useStore } from '@/store/useStore';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
@@ -24,6 +26,7 @@ const NAV_ITEMS = [
 
 export function Navigation() {
   const pathname = usePathname();
+  const resetToDefaults = useStore((s) => s.resetToDefaults);
 
   return (
     <nav className="flex flex-col h-full bg-slate-900 text-white w-60 shrink-0">
@@ -62,8 +65,19 @@ export function Navigation() {
         </div>
       </div>
 
-      <div className="px-5 py-4 border-t border-slate-700">
-        <p className="text-xs text-slate-500">7 Sites · 63 Staff</p>
+      <div className="px-3 py-4 border-t border-slate-700 space-y-2">
+        <button
+          onClick={() => {
+            if (confirm('Reset all data to defaults? This will discard any changes you have made.')) {
+              resetToDefaults();
+            }
+          }}
+          className="flex items-center gap-2 w-full px-3 py-2 rounded-lg text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all"
+        >
+          <RotateCcw className="w-3 h-3 shrink-0" />
+          Reset to defaults
+        </button>
+        <p className="text-xs text-slate-500 px-3">7 Sites · 63 Staff</p>
       </div>
     </nav>
   );
