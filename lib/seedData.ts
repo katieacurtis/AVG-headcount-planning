@@ -1,13 +1,13 @@
 import { Site, StaffMember, HeadcountRequirement, RecruitmentRecord } from './types';
 
 export const SITES: Site[] = [
-  { id: 'north', name: 'North Clinic', type: '24h', color: '#6366f1' },
-  { id: 'south', name: 'South Hospital', type: '24h', color: '#8b5cf6' },
-  { id: 'east', name: 'East Practice', type: 'mon-fri', color: '#10b981' },
-  { id: 'west', name: 'West Practice', type: 'mon-fri', color: '#f59e0b' },
-  { id: 'central_clinic', name: 'Central Clinic', type: 'mon-fri', color: '#ef4444' },
-  { id: 'riverside', name: 'Riverside Practice', type: 'mon-fri', color: '#0ea5e9' },
-  { id: 'meadow', name: 'Meadow Practice', type: 'mon-fri', color: '#84cc16' },
+  { id: 'north', name: 'Storrington', type: '24h', color: '#6366f1' },
+  { id: 'south', name: 'Chichester', type: '24h', color: '#8b5cf6' },
+  { id: 'east', name: 'Ashington', type: 'mon-fri', color: '#10b981' },
+  { id: 'west', name: 'Pulborough', type: 'mon-fri', color: '#f59e0b' },
+  { id: 'central_clinic', name: 'Worthing', type: 'mon-fri', color: '#ef4444' },
+  { id: 'riverside', name: 'Westergate', type: 'mon-fri', color: '#0ea5e9' },
+  { id: 'meadow', name: "Cat's Whiskers", type: 'mon-fri', color: '#84cc16' },
   { id: 'central', name: 'Central Support', type: 'mon-fri', color: '#94a3b8' },
 ];
 
